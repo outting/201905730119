@@ -1,0 +1,63 @@
+<!doctype html>
+ 	<html>
+ 	<head>
+ 	<meta charset='UTF-8'>
+ 	<title>鲨鱼</title>
+ 	<style>
+ 		body{
+ 			overflow: hidden;
+ 			margin: 0;
+ 			background: #52adcb;
+ 		}
+ 		.fish{
+ 			width: 174px;
+ 			height: 126px;
+ 			margin: 100px auto;
+ 			background: url(images/fish8.png) left top;
+ 			animation: go 2s steps(11) infinite, go1 20s infinite linear;
+ 		}
+ 		.shark{
+ 			width: 509px;
+ 			height: 270px;
+ 			margin: 100px auto;
+ 			background: url(images/shark1.png) left top;
+ 			animation: go 2s steps(11) infinite, go2 5s infinite;
+ 		}
+ 		@keyframes go{
+        from{
+            background-position-y:0%;
+        }
+        to{
+        	background-position-y:100%;
+        } 
+ 		}
+ 		@keyframes go1{
+        0%{
+           transform: translate(0px,0px)
+        }
+        25%{
+            transform: translate(500px,0px) rotate(90deg)
+        }
+        50%{
+        	transform: translate(500px,300px) rotate(180deg)
+        }
+        75%{
+        	transform: translate(0px,300px) rotate(270deg)
+        }
+        100%{
+        	transform: translate(0px,0px) rotate(360deg)
+ 		}
+ 		@keyframes go2{
+        from{
+            transform:translate(-600px,0px);
+        }
+        to{
+        	transform:translate(-1300px,0px);
+ 		}
+ 	    }
+ 	</style>
+ 	<body>
+ 		<marquee direction="right" scrollamount="15" behavior="scroll"><div class="shark"></div></marquee>
+ 		<div class="fish"></div>
+ 	</body>
+ 	</html
